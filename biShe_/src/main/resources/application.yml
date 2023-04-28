@@ -1,0 +1,53 @@
+server:
+  port: 8333 # 服务端口
+spring:
+  application:
+    name: biShe# 服务名
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/shiXun?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: root
+  redis:
+    host: 8.136.11.109
+    port: 6379
+    database: 0
+    password: root  #默认为空
+    timeout: 3000ms #最大等待时间，超时则抛出异常，否则请求一直等待
+    lettuce:
+      pool:
+        max-active: 20  #最大连接数，负值表示没有限制，默认8
+        max-wait: -1    #最大阻塞等待时间，负值表示没限制，默认-1
+        max-idle: 8     #最大空闲连接，默认8
+        min-idle: 0     #最小空闲连接，默认0
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射 address_book--->AddressBook   user_name--->userName
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+#设置日志级别
+#logging:
+#  level:
+#    root: ERROR
+
+shiXun:
+  kind: D:\shiXunImg\kind\
+  product: D:\projcets\shixun_before_\src\main\resources\static\
+  addProduct: D:\projcets\shixun_before_\src\main\resources\static\picture\
+  user: D:\shiXunImg\user\
+
+alipay:
+  appId: 2021000121602073
+  appPrivateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCkRAI61JGG2KSfarAy1/us+Sa/jOF0YvFQqh6MpHdZL9/cVECm/g7fvSvR35cg5e8THCP/Ngq9EihS9janGN1IUXqTC6CXEf0s+7brVLIyFWUjWYymZsG2Hduv9i/+3OCORdp2aq4H2WVZvoZKQtcAwuRWxz9fAc5Sv06LDkrMdFVEslDsPe26KT+9wosLKR0mg5DDsKCfUVjqPRG4OvSGoBGFmuF2pCOnyA8u0ue2hAHDMXYvHfWP9viqQsILoyR3Mu7cCxnPyfysxTQcVs+Pff1TKuKDoeMBRWbzSRkmFe6c5oKusIoLpEG1/kiznZpyRuvbh03jfFgWVRvJQYtPAgMBAAECggEAG+OsGT70AlgQAz0C8272PRUEPit2L+OIozBvBWP7G3pkYK0xWOjzr4sXwIdcymofoDf76J3NTvKhRAynlNFE6L1kuUiVGHEmche+o8/6fURiqpDOr4Xsx7XkEckTtwrbWWyEvew45f5EFeuiM0OL64YrbIxhtwjAdg4jELr5eiLUh/fB+o7u2t7MFLuGrfiS0ufgEi7CAVpohPcCCdvLOHLt6sLWjf48VBaBGQIp242/ZE/+tMAmsERmmXcaLlcfJaeBIG3ZHsDbsjKOWJK4dJecvJdwPLUdwurdA4dhL1qfVQxUdEHGpx/r2WXPsgHOnTieKfyrTdbHD4XZ6BzlcQKBgQDYO5aNoKp47a2bM3zLnHBzv3u1u6hPHmo0f1ErUgq6LdjrGUck9kkkMzN0yNAEq46RyBzcKK2q2eHzWnmI1/EV3KgXSrePoc1wJ/qwTSVqtJLAP5mUMkfyGpWdUdHl0gWuGDBAjt2+uwSy4+yPIPTGktCezKMYJt3fyQh0FgrOZwKBgQDCecR/iDOlKgmwj4bwv4/9adJLrDz0TJkmr9DMLJUcuycgliL6HkfwytxnbQuh9lSYlkEkmk79jw9dM62fgRuCqBn/TW7WKILmZ/r6dDip3oeKj0XS1ddRpSvMJwkqBEGcBnTt+U3iXs4xom3phhvq+KwsvgZ72cpHGxmXqjj62QKBgBPzk5Wn0HLuA0nBu28SFTIo5eJD2WjLdqM3aCbmIAVDu7MdlvnrG56Sdtn8uWzk43fCDh+mRTfxeK66l2IwApewz3WuuDcxh8IkfjYMODqbRLsmYyZQaWEGYO2uIf7hnRKOOs2KIR27JdjXvPkL4mn8G/G7EgVleK1wYC5N5ltbAoGBALpdnqTojTV2N5rvsEz+Bqq+wjyqbi9fSFT+n4VKJAtIfpKHzjUK1741aUnkAgXP3fnr47mD9raeZgbXA0ebnhVzqpYySkkIwYizlJx2y+Zdzl5GNo95RcKEGpilv+537bfrqBp1kuGgINEH63SihBaE/9pQsD331BSYL8pb4gbhAoGBAMAE9xpbAODCNQ5tUspk7SPUXIOPoo894In4h1gmg8calK2m0BmEMho3YWeO/ukprF27vMWqV/qmW7rL3NN62Z9rSNsL9od/hBgQsll3a+wXt84WYhTjl5mOi78VybFFupNy4FT5FKak4B5FyDOb1/JCEFQWpSkeseGmgHXHjlvq
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlgngvl0IDbKT9VOvOemAS3eKZZxZISAE4C1ZxVBSvCmx1P/vYS3lqk/btZVfd/9v0Fg7tzsNzzBI5yFYSqxQ6SMI1v4rAq+M0ZvfWv74CU7dKoznOtIRda6bB5kJSKN2klnfJ1AZA3P+xmaCAyo3TvAitroAKRt5eLxxSgBJtv0rWKI5G/hHVnQ2E1s34kOG50V4Dty9ymuNKOB2+Gif+f3bqYP6t47hi3puUDmkrgLEQjLjUAgLYNT0NLfUCPzkKU68lWVuQnWkkqCDR6XBfLJKplB7w7aCHyUlhTwAvpynd+rmXMRp4cC29hDCQLZpgAP3UmmgE+gYuIaWA30HSQIDAQAB
+  # 支付宝回调，更新订单状态  需要内网穿透
+  notifyUrl: http://i6citp.natappfree.cc/alipay/notify
+  returnUrl: http://localhost:8333/orders.html  #回调的url http://i6citp.natappfree.cc
+
+ # 商户账号 wfydwc7493@sandbox.com  沙箱账户-买家
+ # 登录密码111111  支付密码 111111
+

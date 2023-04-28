@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="./js/echarts.js"></script>
+    <style>
+        .user{
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        .num{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .cc{
+            width: 32%;
+            margin-bottom: 20px;
+
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 80px;
+            color: #fff;
+        }
+        .detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 15px;
+        }
+        .price {
+            font-size: 30px;
+            margin-bottom: 0px;
+            line-height: 30px;
+            height: 30px;
+            margin-top: 10px;
+
+        }
+        .desc {
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        .graph{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .dd {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <el-row>
+            <el-col :span="8" style="padding-right: 10px">
+<!--            <el-card class="box-card" >-->
+<!--                <div class="user">-->
+<!--                    <img src="picture/1.webp" alt="">-->
+<!--                    <div class="userinfo">-->
+<!--                        <p class="=name">admin</p>-->
+<!--                        <p class="=asscess">超级管理员</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="login-info">-->
+<!--                    <p>上次登录时间: <span>2022-12-03</span></p>-->
+<!--                    <p>上次登录地点: <span>北京</span></p>-->
+<!--                </div>-->
+<!--            </el-card>-->
+
+                <el-card class="box-card" >
+                    <el-table
+                            :data="tableData"
+                            height="700"
+                            border
+                            style="width: 100%">
+                        <el-table-column
+                                prop="date"
+                                label="商品名称"
+                                width="90">
+                        </el-table-column>
+                        <el-table-column
+                                prop="name"
+                                label="今日购买"
+                                width="90">
+                        </el-table-column>
+                        <el-table-column
+                                prop="address"
+                                label="总购买">
+                        </el-table-column>
+                    </el-table>
+                </el-card>
+
+            </el-col>
+            <el-col :span="16" style="padding-left: 10px">
+                <div class="num">
+                <el-card   class="cc" v-for="item in countData" :key="item.name" :body-style="{display:'flex', padding:0}">
+                    <i class="icon" :class="`el-icon-${item.icon}`" :style="{background:item.color}"></i>
+                    <div class="detail">
+                        <p class="price">{{item.value}}</p>
+                        <p class="desc">{{item.name}}</p>
+                    </div>
+                </el-card>
+                </div>
+
+                <!--折线图-->
+                <el-card style="height: 380px" >
+                    <div ref="echarts3" style="height: 260px">
+
+
+
+                    </div>
+
+
+                </el-card>
+
+            </el-col>
+        </el-row>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/modernizr-3.11.7.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-migrate-3.3.2.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/fancybox.min.js"></script>
+    <script src="./js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        axios.defaults.baseURL = "http://localhost:8333";
+        new Vue({
+            el: "#app",
+            data: {
+                tableData: [{
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-02',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-08',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-06',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-07',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }],
+                countData:[
+                    {
+                        name:"今日支付订单",
+                        value: 123,
+                        icon:"success",
+                        color:"#2ec7c9"
+                    },
+                    {
+                        name:"今日入账",
+                        value:210,
+                        icon:"s-goods",
+                        color:"#ffb980"
+                    },
+                    {
+                        name:"今日未支付订单",
+                        value:210,
+                        icon:"s-goods",
+                        color:"#5ab1ef"
+                    },
+                    {
+                        name:"本月支付订单",
+                        value: 123,
+                        icon:"success",
+                        color:"#2ec7c9"
+                    },
+                    {
+                        name:"本月入账",
+                        value:210,
+                        icon:"s-goods",
+                        color:"#ffb980"
+                    },
+                    {
+                        name:"本月未支付订单",
+                        value: 123,
+                        icon:"s-goods",
+                        color:"#2ec7c9"
+                    },
+                ]
+            },
+            mounted() {
+                //基于准备好的dom，初始化echarts实例
+                const echarts3 = echarts.init(this.$refs.echarts3);
+                const echarts3Option={
+                    tooltip:{
+                        trigger:"item",
+                    },
+                    color:[
+                        "#0f78f4",
+                        "#dd536b",
+                        "#9462e5",
+                        "#a6a6a6",
+                        "#e1bb22",
+                        "#3ed1cf",
+                    ],
+                    series:[
+                        {
+                            data: this.videoData,
+                            type:'pie'
+                        }
+                    ],
+                }
+                echarts3.setOptions(echarts3Option)
+            },
+            methods: {
+            },
+
+        })
+    </script>
+</body>
+</html>

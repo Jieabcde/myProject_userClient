@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Brancy - Cosmetic & Beauty Salon Website Template</title>
+    <meta name="description" content="Brancy - Cosmetic & Beauty Salon Website Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="bootstrap, ecommerce, ecommerce html, beauty, cosmetic shop, beauty products, cosmetic, beauty shop, cosmetic store, shop, beauty store, spa, cosmetic, cosmetics, beauty salon">
+    <!-- Vendors JS -->
+    <link href="./css/css2.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./css/css2.css" rel="stylesheet">
+
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/fancybox.min.css">
+    <link rel="stylesheet" href="./css/nice-select.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.min.css">
+
+
+    <link rel="stylesheet" href="./css/index.css">
+
+
+</head>
+
+<body>
+
+<!--== Wrapper Start ==-->
+<div class="wrapper" id="app">
+
+    <!--== Start Header Wrapper ==-->
+<!--    <header class="header-area sticky-header">-->
+<!--        <div class="container">-->
+<!--            <div class="row align-items-center">-->
+<!--                <div class="col-5 col-sm-6 col-lg-3">-->
+<!--                    <div class="header-logo">-->
+<!--                        <a href="index.html">-->
+<!--                            <img class="logo-main" src="./picture/logo.webp" width="95" height="68" alt="Logo">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6 d-none d-lg-block">-->
+<!--                    <div class="header-navigation">-->
+<!--                        <ul class="main-nav justify-content-start">-->
+<!--                            <li class="has-submenu"><a href="http://localhost:8333">主页</a></li>-->
+<!--                            <li><a href="about-us.html">关于</a></li>-->
+<!--                            <li class="has-submenu position-static"><a href="http://localhost:8333/all">购物</a>-->
+<!--                                <ul class="submenu-nav-mega">-->
+<!--                                    <li><a href="#/" class="mega-title">购物布局</a>-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="product.html">商品 3 列</a></li>-->
+<!--                                            <li><a href="product-four-columns.html">商品 4 列</a></li>-->
+<!--                                            <li><a href="product-left-sidebar.html">商品左侧边栏</a></li>-->
+<!--                                            <li><a href="product-right-sidebar.html">商品右侧边栏</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </li>-->
+<!--                                    <li><a href="#/" class="mega-title">单一产品</a>-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="product-details-normal.html">单一产品-正常</a></li>-->
+<!--                                            <li><a href="product-details.html">单一产品-变量</a></li>-->
+<!--                                            <li><a href="product-details-group.html">单一产品-分组</a></li>-->
+<!--                                            <li><a href="product-details-affiliate.html">单一产品-关联</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </li>-->
+<!--                                    <li><a href="#/" class="mega-title">其它页面</a>-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="product-cart.html">购物车</a></li>-->
+<!--                                            <li><a href="product-checkout.html">结算</a></li>-->
+<!--                                            <li><a href="product-wishlist.html">愿望清单</a></li>-->
+<!--                                            <li><a href="product-compare.html">商品比较</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                            <li class="has-submenu"><a href="blog.html">博客</a>-->
+<!--                                <ul class="submenu-nav">-->
+<!--                                    <li class="has-submenu"><a href="#/">博客布局</a>-->
+<!--                                        <ul class="submenu-nav">-->
+<!--                                            <li><a href="blog.html">博客网格</a></li>-->
+<!--                                            <li><a href="blog-left-sidebar.html">博客左侧边栏</a></li>-->
+<!--                                            <li><a href="blog-right-sidebar.html">博客右侧边栏</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </li>-->
+<!--                                    <li><a href="blog-details.html">博客详情</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                            <li class="has-submenu"><a href="account-login.html">其它</a>-->
+<!--                                <ul class="submenu-nav">-->
+<!--                                    <li><a href="account-login.html">我的账户</a></li>-->
+<!--                                    <li><a href="faq.html">常见问题</a></li>-->
+<!--                                    <li><a href="page-not-found.html">页面未找到</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                            <li><a href="contact.html">联系</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-7 col-sm-6 col-lg-3">-->
+
+<!--                    <div class="header-action justify-content-end">-->
+
+<!--                        <div v-if="!userInfo">-->
+<!--                            <span style="margin-right: 20px;" >未登录</span>-->
+<!--                        </div>-->
+<!--                        <div v-if="userInfo!=null">-->
+<!--                            <span style="margin-right: 20px;" >您好,{{userInfo.utel}},欢迎回来</span>-->
+<!--                        </div>-->
+
+
+<!--                        <button class="header-action-btn ms-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasSearch" aria-controls="AsideOffcanvasSearch">-->
+<!--                                <span class="icon">-->
+<!--                                  <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+<!--                                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern1)"></rect>-->
+<!--                                    <defs>-->
+<!--                                      <pattern id="pattern1" patterncontentunits="objectBoundingBox" width="1" height="1">-->
+<!--                                        <use xlink:href="#image0_504:11" transform="scale(0.0333333)"></use>-->
+<!--                                      </pattern>-->
+<!--                                      <image id="image0_504:11" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABiUlEQVRIie2Wu04CQRSGP0G2EUtIbHwA8B3EQisLIcorEInx8hbEZ9DKy6toDI1oAgalNFpDoYWuxZzJjoTbmSXERP7kZDbZ859vdmb27MJcf0gBUAaugRbQk2gBV3IvmDa0BLwA4Zh4BorTACaAU6fwPXAI5IAliTxwBDScvJp4vWWhH0BlTLEEsC+5Fu6lkgNdV/gKDnxHCw2I9rSiNQNV8baBlMZYJtpTn71KAg9SY3dUYn9xezLPgG8P8BdwLteq5X7CzDbnAbXKS42WxtQVUzoGeFlqdEclxXrnhmhhkqR+8KuMqzHA1vumAddl3IwB3pLxVmOyr1NjwKQmURJ4lBp7GmOAafghpg1qdSDeDrCoNReJWmZB4dsAPsW7rYVa1Rx4FbOEw5TEPKmFvgMZX3DCgYeYNniMaQ5piTXghGhPLdTmZ33hYNpem98f/UHRwSxvhqhXx4anMA3/EmhiOlJPJnSBOb3uQcpOE65VhujPpAms/Bu4u+x3swRbeB24mTV4LgB+AFuLedkPkcmmAAAAAElFTkSuQmCC"></image>-->
+<!--                                    </defs>-->
+<!--                                  </svg>-->
+<!--                                </span>-->
+<!--                        </button>-->
+
+<!--                        <a href="/allCart">-->
+<!--                            <button class="header-action-btn" type="button" data-bs-toggle="offcanvas">-->
+<!--                                <span class="icon">-->
+<!--                                  <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+<!--                                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern2)"></rect>-->
+<!--                                    <defs>-->
+<!--                                      <pattern id="pattern2" patterncontentunits="objectBoundingBox" width="1" height="1">-->
+<!--                                        <use xlink:href="#image0_504:9" transform="scale(0.0333333)"></use>-->
+<!--                                      </pattern>-->
+<!--                                      <image id="image0_504:9" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABFUlEQVRIie2VMU7DMBSGvwAqawaYuAmKxCW4A1I5Qg4AA93KBbp1ZUVUlQJSVVbCDVhgzcTQdLEVx7WDQ2xLRfzSvzzb+d6zn2MYrkugBBYevuWsHKiFn2JBMwH8Bq6Aw1jgBwHOYwGlPgT4LDZ4I8BJDNiEppl034UEJ8DMAJ0DByHBACPgUYEugePQUKkUWAmnsaB/Ry/YO9aXCwlT72AdrqaWEohwBWxSwc8ReIVtYIr5bM5pXqO+Men7rozGlkVSv4lJj1WQfsbvXVkNVNk1eEK4ik9/yuwzAPhLh5iuU4jtftMDR4ZJJXChxTJ2H3zXGDgWc43/X2Wro8G81a8u2fXU2nXiLVAxvNIKuPGW/r/2SltF+a3Rkw4pmwAAAABJRU5ErkJggg=="></image>-->
+<!--                                    </defs>-->
+<!--                                  </svg>-->
+<!--                                </span>-->
+<!--                            </button>-->
+
+
+<!--                        </a>-->
+
+<!--                        &lt;!&ndash;                        <input type="hidden" id="user" th:value="${user?.uid}">&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <a class="header-action-btn" th:onclick="javascript:test('+${session.uid}')">&ndash;&gt;-->
+<!--                        <a class="header-action-btn" @click="onself">-->
+<!--                                <span class="icon">-->
+<!--                                  <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+<!--                                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern3)"></rect>-->
+<!--                                    <defs>-->
+<!--                                      <pattern id="pattern3" patterncontentunits="objectBoundingBox" width="1" height="1">-->
+<!--                                        <use xlink:href="#image0_504:10" transform="scale(0.0333333)"></use>-->
+<!--                                      </pattern>-->
+<!--                                      <image id="image0_504:10" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABEUlEQVRIie3UMUoDYRDF8Z8psqUpLBRrBS+gx7ATD6E5iSjeQQ/gJUzEwmChnZZaKZiQ0ljsLkhQM5/5Agr74DX7DfOfgZ1Hoz+qAl30Marcx2H1thCtY4DJN76parKqmAH9DM+6eTcArX2QE3yVAO7lBA8TwMNIw6UgeJI46My+rWCjUQL0LVIUBd8lgEO1UfBZAvg8oXamCuWNRu64nRNMmUo/wReSXLXayoDoKc9miMvqW/ZNG2VRNLla2MYudrCFTvX2intlnl/gGu/zDraGYzyLZ/UTjrD6G2AHpxgnAKc9xgmWo9BNPM4BnPYDNiLg24zQ2oNpyFdZvRKZLlGhnvvKPzXXti/Yy7hEo3+iD9EHtgdqxQnwAAAAAElFTkSuQmCC"></image>-->
+<!--                                    </defs>-->
+<!--                                  </svg>-->
+<!--                                </span>-->
+<!--                        </a>-->
+
+<!--                        <button class="header-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasMenu" aria-controls="AsideOffcanvasMenu">-->
+<!--                            <span></span>-->
+<!--                            <span></span>-->
+<!--                            <span></span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+
+    <header class="header-area sticky-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-5 col-sm-6 col-lg-3">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img class="logo-main" src="./picture/logo.webp" width="95" height="68" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="header-navigation">
+                        <ul class="main-nav justify-content-start">
+                            <li class="has-submenu"><a href="http://localhost:8333">主页</a></li>
+                            <!--                            <li><a href="about-us.html">关于</a></li>-->
+                            <li class="has-submenu position-static"><a href="http://localhost:8333/product.html">购物</a>
+                                <ul class="submenu-nav-mega">
+                                    <li><a href="#/" class="mega-title">购物布局</a>
+                                        <ul>
+                                            <li><a href="product.html">商品 3 列</a></li>
+                                            <li><a href="product-four-columns.html">商品 4 列</a></li>
+                                            <li><a href="product-left-sidebar.html">商品左侧边栏</a></li>
+                                            <li><a href="product-right-sidebar.html">商品右侧边栏</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#/" class="mega-title">单一产品</a>
+                                        <ul>
+                                            <li><a href="product-details-normal.html">单一产品-正常</a></li>
+                                            <li><a href="product-details.html">单一产品-变量</a></li>
+                                            <li><a href="product-details-group.html">单一产品-分组</a></li>
+                                            <li><a href="product-details-affiliate.html">单一产品-关联</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#/" class="mega-title">其它页面</a>
+                                        <ul>
+                                            <li><a href="product-cart.html">购物车</a></li>
+                                            <li><a href="product-checkout.html">结算</a></li>
+                                            <li><a href="product-wishlist.html">愿望清单</a></li>
+                                            <li><a href="product-compare.html">商品比较</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu"><a href="blog.html">博客</a>
+                                <ul class="submenu-nav">
+                                    <li class="has-submenu"><a href="#/">博客布局</a>
+                                        <ul class="submenu-nav">
+                                            <li><a href="blog.html">博客网格</a></li>
+                                            <li><a href="blog-left-sidebar.html">博客左侧边栏</a></li>
+                                            <li><a href="blog-right-sidebar.html">博客右侧边栏</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog-details.html">博客详情</a></li>
+                                </ul>
+                            </li>
+                            <!--                            <li class="has-submenu"><a href="account-login.html">其它</a>-->
+                            <!--                                <ul class="submenu-nav">-->
+                            <!--                                    <li><a href="account-login.html">我的账户</a></li>-->
+                            <!--                                    <li><a href="faq.html">常见问题</a></li>-->
+                            <!--                                    <li><a href="page-not-found.html">页面未找到</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </li>-->
+                            <li><a href="contact.html">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-7 col-sm-6 col-lg-3">
+
+                    <div class="header-action justify-content-end">
+
+                        <div v-if="!userInfo">
+                            <span style="margin-right: 20px;" >未登录</span>
+                        </div>
+                        <div v-if="userInfo!=null">
+                            <span style="margin-right: 20px;" >您好,{{userInfo.utel}},欢迎回来</span>
+                        </div>
+
+
+                        <button class="header-action-btn ms-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasSearch" aria-controls="AsideOffcanvasSearch">
+                                <span class="icon">
+                                  <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern1)"></rect>
+                                    <defs>
+                                      <pattern id="pattern1" patterncontentunits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_504:11" transform="scale(0.0333333)"></use>
+                                      </pattern>
+                                      <image id="image0_504:11" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABiUlEQVRIie2Wu04CQRSGP0G2EUtIbHwA8B3EQisLIcorEInx8hbEZ9DKy6toDI1oAgalNFpDoYWuxZzJjoTbmSXERP7kZDbZ859vdmb27MJcf0gBUAaugRbQk2gBV3IvmDa0BLwA4Zh4BorTACaAU6fwPXAI5IAliTxwBDScvJp4vWWhH0BlTLEEsC+5Fu6lkgNdV/gKDnxHCw2I9rSiNQNV8baBlMZYJtpTn71KAg9SY3dUYn9xezLPgG8P8BdwLteq5X7CzDbnAbXKS42WxtQVUzoGeFlqdEclxXrnhmhhkqR+8KuMqzHA1vumAddl3IwB3pLxVmOyr1NjwKQmURJ4lBp7GmOAafghpg1qdSDeDrCoNReJWmZB4dsAPsW7rYVa1Rx4FbOEw5TEPKmFvgMZX3DCgYeYNniMaQ5piTXghGhPLdTmZ33hYNpem98f/UHRwSxvhqhXx4anMA3/EmhiOlJPJnSBOb3uQcpOE65VhujPpAms/Bu4u+x3swRbeB24mTV4LgB+AFuLedkPkcmmAAAAAElFTkSuQmCC"></image>
+                                    </defs>
+                                  </svg>
+                                </span>
+                        </button>
+
+                        <a @click="comeToCart">
+                            <button class="header-action-btn" type="button" data-bs-toggle="offcanvas">
+                                <span class="icon">
+                                  <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern2)"></rect>
+                                    <defs>
+                                      <pattern id="pattern2" patterncontentunits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_504:9" transform="scale(0.0333333)"></use>
+                                      </pattern>
+                                      <image id="image0_504:9" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABFUlEQVRIie2VMU7DMBSGvwAqawaYuAmKxCW4A1I5Qg4AA93KBbp1ZUVUlQJSVVbCDVhgzcTQdLEVx7WDQ2xLRfzSvzzb+d6zn2MYrkugBBYevuWsHKiFn2JBMwH8Bq6Aw1jgBwHOYwGlPgT4LDZ4I8BJDNiEppl034UEJ8DMAJ0DByHBACPgUYEugePQUKkUWAmnsaB/Ry/YO9aXCwlT72AdrqaWEohwBWxSwc8ReIVtYIr5bM5pXqO+Men7rozGlkVSv4lJj1WQfsbvXVkNVNk1eEK4ik9/yuwzAPhLh5iuU4jtftMDR4ZJJXChxTJ2H3zXGDgWc43/X2Wro8G81a8u2fXU2nXiLVAxvNIKuPGW/r/2SltF+a3Rkw4pmwAAAABJRU5ErkJggg=="></image>
+                                    </defs>
+                                  </svg>
+                                </span>
+                            </button>
+
+
+                        </a>
+
+                        <!--                        <input type="hidden" id="user" th:value="${user?.uid}">-->
+                        <!--                        <a class="header-action-btn" th:onclick="javascript:test('+${session.uid}')">-->
+                        <a class="header-action-btn" @click="onself">
+                                <span class="icon">
+                                  <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern3)"></rect>
+                                    <defs>
+                                      <pattern id="pattern3" patterncontentunits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_504:10" transform="scale(0.0333333)"></use>
+                                      </pattern>
+                                      <image id="image0_504:10" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABEUlEQVRIie3UMUoDYRDF8Z8psqUpLBRrBS+gx7ATD6E5iSjeQQ/gJUzEwmChnZZaKZiQ0ljsLkhQM5/5Agr74DX7DfOfgZ1Hoz+qAl30Marcx2H1thCtY4DJN76parKqmAH9DM+6eTcArX2QE3yVAO7lBA8TwMNIw6UgeJI46My+rWCjUQL0LVIUBd8lgEO1UfBZAvg8oXamCuWNRu64nRNMmUo/wReSXLXayoDoKc9miMvqW/ZNG2VRNLla2MYudrCFTvX2intlnl/gGu/zDraGYzyLZ/UTjrD6G2AHpxgnAKc9xgmWo9BNPM4BnPYDNiLg24zQ2oNpyFdZvRKZLlGhnvvKPzXXti/Yy7hEo3+iD9EHtgdqxQnwAAAAAElFTkSuQmCC"></image>
+                                    </defs>
+                                  </svg>
+                                </span>
+                        </a>
+
+                        <button class="header-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasMenu" aria-controls="AsideOffcanvasMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--== End Header Wrapper ==-->
+
+    <main class="main-content">
+
+        <!--== Start Page Header Area Wrapper ==-->
+        <section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="page-header-st3-content text-center text-md-start">
+                            <ol class="breadcrumb justify-content-center justify-content-md-start">
+                                <li class="breadcrumb-item"><a class="text-dark" href="index.html">首页</a></li>
+                                <li class="breadcrumb-item active text-dark" aria-current="page">商品详情</li>
+                            </ol>
+                            <h2 class="page-header-title">商品详情</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5 class="showing-pagination-results mt-5 mt-md-9 text-center text-md-end">单品展示</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--== End Page Header Area Wrapper ==-->
+
+        <!--== Start Product Details Area Wrapper ==-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <section class="section-space">
+            <div class="container">
+                <div class="row product-details">
+
+                    <!--                        通过此input进行传值，用js  get到vue中-->
+<!--                    <input type="number" style="display: none" id="idididid" th:value="${product.id}">-->
+
+                    <div class="col-lg-6">
+                        <div class="product-details-thumb">
+                            <img :src="getProductImage(productDetail.image)" style="width: 570px;height: 693px" alt="Image">
+                            <span class="flag-new">新品</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product-details-content">
+                            <h5 class="product-details-collection">Brancy旗下系列</h5>
+                            <h3 class="product-details-title" >{{productDetail.pname}}</h3>
+                            <div class="product-details-review">
+                                <div class="product-review-icon">
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <button type="button" class="product-review-show">{{productDetail.reviewCount}}人评价</button>
+                            </div>
+                            <div class="product-details-qty-list">
+                                <div class="qty-list-check" v-for="(p,index) in specifications">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="qtyList1" checked="">
+                                    <label class="form-check-label" for="qtyList1"  >{{p}} </label>
+                                </div>
+                            </div>
+
+
+                            <div class="product-details-pro-qty">
+                                <div class="pro-qty">
+                                    <input type="text" title="Quantity" v-model="buyNum">
+                                </div>
+                            </div>
+
+
+                            <div class="product-details-shipping-cost">
+                                <label class="form-check-label">商品描述：{{productDetail.pmoreinfo}}</label>
+                            </div>
+                            <div class="product-details-action">
+                                <h4 class="price" >￥{{productDetail.price}}</h4>
+                                <div class="product-details-cart-wishlist">
+                                    <button type="button" class="btn-wishlist" data-bs-toggle="modal" @click="joinFavorites"  data-bs-target="#action-WishlistModal"><i class="fa fa-heart-o"></i></button>
+                                    <button type="button" class="btn" data-bs-toggle="modal" @click="joinCart">加入购物车</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="nav product-details-nav" id="product-details-nav-tab" role="tablist">
+<!--                            <button class="nav-link" id="specification-tab" data-bs-toggle="tab" data-bs-target="#specification" type="button" role="tab" aria-controls="specification" aria-selected="false">规格</button>-->
+                            <button class="nav-link active" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="true">评论</button>
+                        </div>
+                        <div class="tab-content" id="product-details-nav-tabContent">
+                            <div class="tab-pane" id="specification" role="tabpanel" aria-labelledby="specification-tab">
+                                <ul class="product-details-info-wrap">
+                                    <li><span>重量</span>
+                                        <p>250 g</p>
+                                    </li>
+                                    <li><span>尺寸</span>
+                                        <p>10 x 10 x 15 cm</p>
+                                    </li>
+                                    <li><span>材料</span>
+                                        <p>60% 棉, 40% 聚酯纤维</p>
+                                    </li>
+                                    <li><span>其他信息</span>
+                                        <p>American heirloom jean shorts pug seitan letterpress</p>
+                                    </li>
+                                </ul>
+
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit corporis quo voluptate culpa soluta, esse accusamus, sunt quia omnis amet temporibus sapiente harum quam itaque libero tempore. Ipsum, ducimus. lorem</p>
+                            </div>
+
+                            <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+                                <!--== Start Reviews Content Item ==-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <div class="product-review-item" v-for="p in productDetail.productReviewModelList">
+                                    <div class="product-review-top">
+                                        <div class="product-review-thumb">
+                                            <img :src="getUserImage(p.image)" width="35 px" height="35 px" alt="Images">
+                                        </div>
+                                        <div class="product-review-content">
+                                            <span class="product-review-name">{{ p.uname }}</span>
+                                            <span class="product-review-designation">{{ p.createTime | formatDate('yyyy-M-d') }}</span>
+                                        </div>
+                                    </div>
+                                    <p class="desc">{{ p.rvcontent }}</p>
+                                    <button type="button" class="review-reply"><i class="fa fa fa-undo"></i></button>
+                                </div>
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--评论区-->
+                                <!--== End Reviews Content Item ==-->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="product-reviews-form-wrap">
+                            <h4 class="product-form-title">评价</h4>
+                            <div class="product-reviews-form">
+<!--                                    <div class="form-input-item">-->
+<!--                                        <textarea class="form-control" placeholder="输入您的反馈" v-model="addComment.rvcontent"></textarea>-->
+<!--                                    </div>-->
+                                    <div class="form-input-item">
+                                        <input class="form-control" type="text" placeholder="请输入您的评价" v-model="addReview.rvcontent">
+                                    </div>
+<!--                                    <div class="form-input-item">-->
+<!--                                        <input class="form-control" type="email" placeholder="邮箱地址">-->
+<!--                                    </div>-->
+<!--                                    <div class="form-input-item">-->
+<!--                                        <div class="form-ratings-item">-->
+<!--                                            <select id="product-review-form-rating-select" class="select-ratings">-->
+<!--                                                <option value="1">01</option>-->
+<!--                                                <option value="2">02</option>-->
+<!--                                                <option value="3">03</option>-->
+<!--                                                <option value="4">04</option>-->
+<!--                                                <option value="5">05</option>-->
+<!--                                            </select>-->
+<!--                                            <span class="title">留下你的评级</span>-->
+<!--                                            <div class="product-ratingsform-form-wrap">-->
+<!--                                                <div class="product-ratingsform-form-icon">-->
+<!--                                                    <i class="fa fa-star-o"></i>-->
+<!--                                                    <i class="fa fa-star-o"></i>-->
+<!--                                                    <i class="fa fa-star-o"></i>-->
+<!--                                                    <i class="fa fa-star-o"></i>-->
+<!--                                                    <i class="fa fa-star-o"></i>-->
+<!--                                                </div>-->
+<!--                                                <div id="product-review-form-rating" class="product-ratingsform-form-icon-fill">-->
+<!--                                                    <i class="fa fa-star"></i>-->
+<!--                                                    <i class="fa fa-star"></i>-->
+<!--                                                    <i class="fa fa-star"></i>-->
+<!--                                                    <i class="fa fa-star"></i>-->
+<!--                                                    <i class="fa fa-star"></i>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="reviews-form-checkbox">-->
+<!--                                            <input class="form-check-input" type="checkbox" value="" id="ReviewsFormCheckbox" checked="">-->
+<!--                                            <label class="form-check-label" for="ReviewsFormCheckbox">匿名评价.</label>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                    <div class="form-input-item mb-0">
+                                        <!--                                            不用button ，因为有form表单影响-->
+                                        <span class="btn" @click="addReviewContent">提交</span>
+<!--                                        <button type="submit" class="btn">提交</button>-->
+                                    </div>
+<!--                                </form>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--详情开始-->
+        <!--== End Product Details Area Wrapper ==-->
+
+        <!--== Start Product Banner Area Wrapper ==-->
+        <div class="container">
+            <!--== Start Product Category Item ==-->
+            <a href="product.html" class="product-banner-item">
+                <img src="./picture/72.webp" width="1170" height="240" alt="Image-HasTech">
+            </a>
+            <!--== End Product Category Item ==-->
+        </div>
+        <!--== End Product Banner Area Wrapper ==-->
+
+        <!--== Start Product Area Wrapper ==-->
+        <section class="section-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2 class="title">相关产品</h2>
+                            <p class="m-0">当他痛苦的时候，他被认为是一个好人。他是纯洁的，所以他会来哀悼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-n10">
+                    <div class="col-12">
+                        <div class="swiper related-product-slide-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide mb-10">
+                                    <!--== Start Product Item ==-->
+                                    <div class="product-item product-st2-item">
+                                        <div class="product-thumb">
+                                            <a class="d-block" href="">
+                                                <img src="./picture/8.webp" width="370" height="450" alt="Image-HasTech">
+                                            </a>
+                                            <span class="flag-new">新品</span>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-rating">
+                                                <div class="rating">
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-half-o"></i>
+                                                </div>
+                                                <div class="reviews">150人评价</div>
+                                            </div>
+                                            <h4 class="title"><a href="">可读内容 DX22</a></h4>
+                                            <div class="prices">
+                                                <span class="price">￥210.00</span>
+                                                <span class="price-old">300.00</span>
+                                            </div>
+                                            <div class="product-action">
+                                                <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
+                                                    <span>添加购物车</span>
+                                                </button>
+                                                <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
+                                                    <i class="fa fa-expand"></i>
+                                                </button>
+                                                <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End prPduct Item ==-->
+                                </div>
+                                <div class="swiper-slide mb-10">
+                                    <!--== Start Product Item ==-->
+                                    <div class="product-item product-st2-item">
+                                        <div class="product-thumb">
+                                            <a class="d-block" href="">
+                                                <img src="./picture/71.webp" width="370" height="450" alt="Image-HasTech">
+                                            </a>
+                                            <span class="flag-new">新品</span>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-rating">
+                                                <div class="rating">
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-half-o"></i>
+                                                </div>
+                                                <div class="reviews">150人评价</div>
+                                            </div>
+                                            <h4 class="title"><a href="">可读内容 DX22</a></h4>
+                                            <div class="prices">
+                                                <span class="price">￥210.00</span>
+                                                <span class="price-old">300.00</span>
+                                            </div>
+                                            <div class="product-action">
+                                                <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
+                                                    <span>添加购物车</span>
+                                                </button>
+                                                <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
+                                                    <i class="fa fa-expand"></i>
+                                                </button>
+                                                <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End prPduct Item ==-->
+                                </div>
+                                <div class="swiper-slide mb-10">
+                                    <!--== Start Product Item ==-->
+                                    <div class="product-item product-st2-item">
+                                        <div class="product-thumb">
+                                            <a class="d-block" href="">
+                                                <img src="./picture/52.webp" width="370" height="450" alt="Image-HasTech">
+                                            </a>
+                                            <span class="flag-new">新品</span>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-rating">
+                                                <div class="rating">
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-half-o"></i>
+                                                </div>
+                                                <div class="reviews">150人评价</div>
+                                            </div>
+                                            <h4 class="title"><a href="">可读内容 DX22</a></h4>
+                                            <div class="prices">
+                                                <span class="price">￥210.00</span>
+                                                <span class="price-old">300.00</span>
+                                            </div>
+                                            <div class="product-action">
+                                                <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
+                                                    <span>添加购物车</span>
+                                                </button>
+                                                <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
+                                                    <i class="fa fa-expand"></i>
+                                                </button>
+                                                <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End prPduct Item ==-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--== End Product Area Wrapper ==-->
+
+    </main>
+
+    <!--== Start Footer Area Wrapper ==-->
+    <footer class="footer-area">
+        <!--== Start Footer Main ==-->
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget-item">
+                            <div class="widget-about">
+                                <a class="widget-logo" href="index.html">
+                                    <img src="./picture/logo.webp" width="95" height="68" alt="Logo">
+                                </a>
+                                <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 mt-md-0 mt-9">
+                        <div class="widget-item">
+                            <h4 class="widget-title">Information</h4>
+                            <ul class="widget-nav">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="about-us.html">About us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faq.html">Privacy</a></li>
+                                <li><a href="account-login.html">Login</a></li>
+                                <li><a href="product.html">Shop</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mt-lg-0 mt-6">
+                        <div class="widget-item">
+                            <h4 class="widget-title">Social Info</h4>
+                            <div class="widget-social">
+                                <a href="javascript:;" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                                <a href="javascript:;" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                                <a href="javascript:;" target="_blank" rel="noopener"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== End Footer Main ==-->
+
+        <!--== Start Footer Bottom ==-->
+        <div class="footer-bottom">
+            <div class="container pt-0 pb-0">
+                <div class="footer-bottom-content">
+                    <p class="copyright">Copyright &copy; 2022.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                </div>
+            </div>
+        </div>
+        <!--== End Footer Bottom ==-->
+    </footer>
+    <!--== End Footer Area Wrapper ==-->
+
+    <!--== Scroll Top Button ==-->
+    <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
+
+    <!--== Start Product Quick Wishlist Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-WishlistModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-action-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="modal-action-messages">
+                            <i class="fa fa-check-square-o"></i> Added to wishlist successfully!
+                        </div>
+                        <div class="modal-action-product">
+                            <div class="thumb">
+                                <img :src="getProductImage(productDetail.image)" alt="Organic Food Juice" width="466" height="320">
+                            </div>
+                            <h4 class="product-name"><a href="">收藏夹</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Product Quick Wishlist Modal ==-->
+
+    <!--== Start Product Quick Add Cart Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-CartAddModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-action-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="modal-action-messages">
+                            <i class="fa fa-check-square-o"></i> Added to cart successfully!
+                        </div>
+                        <div class="modal-action-product">
+                            <div class="thumb">
+                                <img src="./picture/modal1.webp" alt="Organic Food Juice" width="466" height="320">
+                            </div>
+                            <h4 class="product-name"><a href="">Readable content DX22</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Product Quick Add Cart Modal ==-->
+
+    <!--== Start Aside Search Form ==-->
+    <aside class="aside-search-box-wrapper offcanvas offcanvas-top" tabindex="-1" id="AsideOffcanvasSearch" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="d-none" id="offcanvasTopLabel">Aside Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa fa-close"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container pt--0 pb--0">
+                <div class="search-box-form-wrap">
+                    <div class="search-note">
+                        <p>Start typing and press Enter to search</p>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="aside-search-form position-relative">
+                            <label for="SearchInput" class="visually-hidden">Search</label>
+                            <input id="SearchInput" type="search" class="form-control" placeholder="Search entire store…">
+                            <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Aside Search Form ==-->
+
+    <!--== Start Product Quick View Modal ==-->
+    <aside class="product-cart-view-modal modal fade" id="action-QuickViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-quick-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <span class="fa fa-close"></span>
+                        </button>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!--== Start Product Thumbnail Area ==-->
+                                    <div class="product-single-thumb">
+                                        <img src="./picture/quick-view1.webp" width="544" height="560" alt="Image-HasTech">
+                                    </div>
+                                    <!--== End Product Thumbnail Area ==-->
+                                </div>
+                                <div class="col-lg-6">
+                                    <!--== Start Product Info Area ==-->
+                                    <div class="product-details-content">
+                                        <h5 class="product-details-collection">Premioum collection</h5>
+                                        <h3 class="product-details-title">Offbline Instant Age Rewind Eraser.</h3>
+                                        <div class="product-details-review mb-5">
+                                            <div class="product-review-icon">
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                            <button type="button" class="product-review-show">150 reviews</button>
+                                        </div>
+                                        <p class="mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet consectetur.</p>
+                                        <div class="product-details-pro-qty">
+                                            <div class="pro-qty">
+                                                <input type="text" title="Quantity" v-model="buyNum">
+                                            </div>
+                                        </div>
+                                        <div class="product-details-action">
+                                            <h4 class="price">￥254.22</h4>
+                                            <div class="product-details-cart-wishlist">
+                                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--== End Product Info Area ==-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Product Quick View Modal ==-->
+
+    <!--== Start Aside Cart ==-->
+    <aside class="aside-cart-wrapper offcanvas offcanvas-end" tabindex="-1" id="AsideOffcanvasCart" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h1 class="d-none" id="offcanvasRightLabel">Shopping Cart</h1>
+            <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Shopping Cart <i class="fa fa-chevron-right"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="aside-cart-product-list">
+                <li class="aside-product-list-item">
+                    <a href="#/" class="remove">×</a>
+                    <a href="">
+                        <img src="./picture/cart1.webp" width="68" height="84" alt="Image">
+                        <span class="product-title">Leather Mens Slipper</span>
+                    </a>
+                    <span class="product-price">1 × £69.99</span>
+                </li>
+                <li class="aside-product-list-item">
+                    <a href="#/" class="remove">×</a>
+                    <a href="">
+                        <img src="./picture/cart2.webp" width="68" height="84" alt="Image">
+                        <span class="product-title">Quickiin Mens shoes</span>
+                    </a>
+                    <span class="product-price">1 × £20.00</span>
+                </li>
+            </ul>
+            <p class="cart-total"><span>Subtotal:</span><span class="amount">£89.99</span></p>
+            <a class="btn-total" href="product-cart.html">View cart</a>
+            <a class="btn-total" href="product-checkout.html">Checkout</a>
+        </div>
+    </aside>
+    <!--== End Aside Cart ==-->
+
+    <!--== Start Aside Menu ==-->
+    <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h1 class="d-none" id="offcanvasExampleLabel">Aside Menu</h1>
+            <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i class="fa fa-chevron-left"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="offcanvasNav" class="offcanvas-menu-nav">
+                <ul>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">home</a>
+                        <ul>
+                            <li><a href="index.html">Home One</a></li>
+                            <li><a href="index-two.html">Home Two</a></li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="about-us.html">about</a></li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">shop</a>
+                        <ul>
+                            <li><a href="#" class="offcanvas-nav-item">Shop Layout</a>
+                                <ul>
+                                    <li><a href="product.html">Shop 3 Column</a></li>
+                                    <li><a href="product-four-columns.html">Shop 4 Column</a></li>
+                                    <li><a href="product-left-sidebar.html">Shop Left Sidebar</a></li>
+                                    <li><a href="product-right-sidebar.html">Shop Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="offcanvas-nav-item">Single Product</a>
+                                <ul>
+                                    <li><a href="product-details-normal.html">Single Product Normal</a></li>
+                                    <li><a href="">Single Product Variable</a></li>
+                                    <li><a href="product-details-group.html">Single Product Group</a></li>
+                                    <li><a href="product-details-affiliate.html">Single Product Affiliate</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="offcanvas-nav-item">Others Pages</a>
+                                <ul>
+                                    <li><a href="product-cart.html">Shopping Cart</a></li>
+                                    <li><a href="product-checkout.html">Checkout</a></li>
+                                    <li><a href="product-wishlist.html">Wishlist</a></li>
+                                    <li><a href="product-compare.html">Compare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">Blog</a>
+                        <ul>
+                            <li><a class="offcanvas-nav-item" href="#">Blog Layout</a>
+                                <ul>
+                                    <li><a href="blog.html">Blog Grid</a></li>
+                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">Pages</a>
+                        <ul>
+                            <li><a href="account-login.html">My Account</a></li>
+                            <li><a href="faq.html">Frequently Questions</a></li>
+                            <li><a href="page-not-found.html">Page Not Found</a></li>
+                        </ul>
+                    </li>
+                    <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!--== End Aside Menu ==-->
+
+</div>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="./js/modernizr-3.11.7.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-migrate-3.3.2.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/fancybox.min.js"></script>
+    <script src="./js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/range-slider.js"></script>
+    <script src="./js/index.js"></script>
+
+
+    <script>
+        axios.defaults.baseURL = "http://localhost:8333";
+        new Vue({
+            el: "#app",
+            data: {
+                // pageNum: 1,
+                // message: "http://localhost:8333/byKid/",
+                userInfo: null,    //用户信息
+                searchName:'',    //模糊搜索
+                pid:'',
+                productDetail:null,
+                specifications:[],
+                addReview:{
+                    pid:'',
+                    uid:'',
+                    rvcontent:null,
+                },
+                buyNum:1,
+                cartInfo:{
+                    pid:'',
+                    uid:''
+                }
+
+            },
+            mounted() {
+                this.showInfo()     //用户信息
+                this.pid=requestUrlParam('pid')
+                this.getProductDetail();
+
+            },
+            methods: {
+                showInfo() {
+                    let userInfo= $.cookie("userInfo")
+                    if(!userInfo) {
+                        console.log('cookie不存在')
+                        this.userInfo=null
+                        return
+                    }
+                    userInfo=JSON.parse(userInfo)
+                    console.log(userInfo)
+                    this.userInfo = userInfo;
+                },
+                onself() {   //个人信息
+                    if (this.userInfo == null) {
+                        window.location.href = 'account-login.html';
+                    } else {
+                        window.location.href = 'my-account.html';
+                    }
+                },
+                //查找商品详情
+                async getProductDetail() {
+                    let {data: result} = await axios.get(`/product/detail?pid=${this.pid}`);
+                    this.productDetail = result.data;
+                    this.specifications=JSON.parse(result.data.productLable.value)
+                },
+                //退出
+                logout() {
+                    $.cookie('userInfo','')
+                    window.location.href='index.html';
+                },
+                getKindImage (image) {
+                    return `http://localhost:8333/common/download?name=${image}&type=kind`
+                },
+                getProductImage (image) {
+                    return `http://localhost:8333/common/download?name=${image}`
+                },
+                //头像
+                getUserImage (image) {
+                    return `http://localhost:8333/common/download?name=${image}&type=user`
+                },
+                //模糊搜索
+                getSearchName() {
+                    window.location.href = 'product.html?searchName='+this.searchName;
+                },
+                //新增评论验证
+                addComment() {
+                    if (this.userInfo == null) {
+                        this.$message.error("当前未登录");
+                        return;
+                    }
+                },
+                //新增评论接口
+                async addReviewContent() {
+                    this.addComment();
+                    this.addReview.pid=this.pid
+                    this.addReview.uid=this.userInfo.uid
+                    let {data: result} = await axios.post("/productReview/addReview",this.addReview);
+                    if (result.code == 1) {
+                        this.$message.success("评论成功");
+                    }
+                    this.addReview = {};
+                    this.getProductDetail();
+                },
+                //购买数减少
+                reduceBuyNum() {
+                    if (this.buyNum == 1) {
+                        return;
+                    } else {
+                        this.buyNum--;
+                    }
+                },
+                //跳转到购物车页面
+                comeToCart() {
+                    if (this.userInfo == null) {
+                        window.location.href = 'account-login.html';
+                    } else {
+                        window.location.href = 'product-cart.html';
+                    }
+                },
+                //购买数增加
+                addBuyNum() {
+                    this.buyNum++;
+                },
+                //加入购物车
+                async joinCart() {
+                    this.addComment();
+                    this.cartInfo.pid=this.pid
+                    this.cartInfo.uid=this.userInfo.uid
+                    let {data: result} = await axios.post("/userCart/joinCart",this.cartInfo);
+                    if (result.code == 1) {
+                        this.$message.success("加入购物车成功");
+                    }
+                },
+                //加入收藏夹 joinFavorites
+                async joinFavorites() {
+                    this.addComment();
+                    this.cartInfo.pid=this.pid
+                    this.cartInfo.uid=this.userInfo.uid
+                    let {data: result} = await axios.post("/userFavorites/joinFavorites",this.cartInfo);
+                }
+            },
+            filters: {
+                //改变输出的日期格式
+                formatDate: function (value, args) {
+                    var dt = new Date(value);
+                    if (args == 'yyyy-M-d') {// yyyy-M-d
+                        let year = dt.getFullYear();
+                        let month = dt.getMonth() + 1;
+                        let date = dt.getDate();
+                        return `${year}年${month}月${date}日`;
+                    } else if (args == 'yyyy-M-d H:m:s') {// yyyy-M-d H:m:s
+                        let year = dt.getFullYear();
+                        let month = dt.getMonth() + 1;
+                        let date = dt.getDate();
+                        let hour = dt.getHours();
+                        let minute = dt.getMinutes();
+                        let second = dt.getSeconds();
+                        return `${year}-${month}-${date} ${hour}:${minute}:${second}`;
+                    } else if (args == 'yyyy-MM-dd') {// yyyy-MM-dd
+                        let year = dt.getFullYear();
+                        let month = (dt.getMonth() + 1).toString().padStart(2, '0');
+                        let date = dt.getDate().toString().padStart(2, '0');
+                        return `${year}-${month}-${date}`;
+                    } else {// yyyy-MM-dd HH:mm:ss
+                        let year = dt.getFullYear();
+                        let month = (dt.getMonth() + 1).toString().padStart(2, '0');
+                        let date = dt.getDate().toString().padStart(2, '0');
+                        let hour = dt.getHours().toString().padStart(2, '0');
+                        let minute = dt.getMinutes().toString().padStart(2, '0');
+                        let second = dt.getSeconds().toString().padStart(2, '0');
+                        return `${year}-${month}-${date} ${hour}:${minute}:${second}`;
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
